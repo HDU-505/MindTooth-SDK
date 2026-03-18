@@ -14,12 +14,8 @@ for interface in psutil.net_if_addrs():
 # 连接设置
 bsr_cfg = BSRConfig("start_config.xml")
 use_eeg = bsr_cfg.use_eeg
-use_gsr = bsr_cfg.use_gsr
-use_ppg = bsr_cfg.use_ppg
 
 eeg_cfg = EEGConfig(bsr_cfg.eeg_device)
-gsr_cfg = GSRConfig(bsr_cfg.gsr_device)
-ppg_cfg = PPGConfig(bsr_cfg.ppg_device)
 
 if use_eeg:
     # 如果使用 EEG 设备
